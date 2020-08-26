@@ -2,7 +2,6 @@
 employee-directory-backend
 
 # To install and run the application
-====================================
 1. Run git clone https://github.com/samer-alsayegh/employee-directory-backend.git employee-directory-backend
 2. cd employee-directory-backend
 3. run npm install
