@@ -10,11 +10,13 @@ router.post('/authenticate-user-login', userController.authenticateUserLogIn);
 
 //Department Routes
 router.get('/list-departments', departmentController.listDepartments);
-router.post('/update-department/:id', departmentController.updateDepartment);
+router.get('/get-department-data/:id', departmentController.getDepartmentData);
+router.post('/update-department', departmentController.updateDepartment);
 router.post('/add-department', departmentController.createDepartment);
 
 //Employee Routes
 router.get('/list-employees', employeeController.listEmployees);
+router.get('/load-managers', employeeController.loadManagers);
 router.post('/update-employee/:id', employeeController.updateEmployee);
 router.post('/add-employee', employeeController.createEmployee);
 

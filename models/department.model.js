@@ -20,7 +20,7 @@ module.exports = (sequelize, Sequelize) => {
     date_updated: {
       type: Sequelize.TIME
     }
-  },{
+  }, {
     tableName: 'department',
     timestamps: false,
     name: {
@@ -30,7 +30,7 @@ module.exports = (sequelize, Sequelize) => {
   });
 
   let employeeModel = require("./employee.model.js")(sequelize, Sequelize);
-  department.hasOne(employeeModel, {foreignKey: 'id'})
-  employeeModel.belongsTo(department, {foreignKey: 'manager_id'})
+  employeeModel.hasOne(department, { foreignKey: 'id' });
+  department.belongsTo(employeeModel, { foreignKey: 'manager_id' });
   return department;
 };

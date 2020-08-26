@@ -26,6 +26,9 @@ module.exports = (sequelize, Sequelize) => {
     dob: {
       type: Sequelize.DATE
     },
+    is_manager: {
+      type: Sequelize.INTEGER
+    },
     date_created: {
       type: Sequelize.TIME
     },
