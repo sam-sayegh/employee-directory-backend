@@ -1,12 +1,18 @@
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const department = sequelize.define("department", {
+  const user = sequelize.define("user", {
     name: {
       type: Sequelize.STRING
     },
-    manager_id: {
-      type: Sequelize.INTEGER
+    email: {
+      type: Sequelize.STRING
+    },
+    password: {
+      type: Sequelize.STRING
+    },
+    authentication_key: {
+      type: Sequelize.TEXT
     },
     date_created: {
       type: Sequelize.TIME
@@ -15,13 +21,13 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.TIME
     }
   },{
-    tableName: 'department',
+    tableName: 'user',
     timestamps: false,
     name: {
-      singular: 'department',
-      plural: 'department',
+      singular: 'user',
+      plural: 'user',
     }
   });
 
-  return department;
+  return user;
 };

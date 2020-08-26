@@ -11,7 +11,7 @@ module.exports = {
         "`gender` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
         "`country` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
         "`phone` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
-        "`picture` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
+        "`picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL," +
         "`department_id` INT(11) NOT NULL DEFAULT 0," +
         "`dob` DATE NULL DEFAULT NULL," +
         "`date_created` timestamp NULL DEFAULT NULL," +
