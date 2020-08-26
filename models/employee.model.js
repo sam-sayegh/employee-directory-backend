@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const employee = sequelize.define("department", {
+  const employee = sequelize.define("employee", {
     name: {
       type: Sequelize.STRING
     },

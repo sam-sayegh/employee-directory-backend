@@ -5,6 +5,12 @@ module.exports = (sequelize, Sequelize) => {
     name: {
       type: Sequelize.STRING
     },
+    description: {
+      type: Sequelize.STRING
+    },
+    office_number: {
+      type: Sequelize.STRING
+    },
     manager_id: {
       type: Sequelize.INTEGER
     },
@@ -23,5 +29,8 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
+  let employeeModel = require("./employee.model.js")(sequelize, Sequelize);
+  department.hasOne(employeeModel, {foreignKey: 'id'})
+  employeeModel.belongsTo(department, {foreignKey: 'manager_id'})
   return department;
 };

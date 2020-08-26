@@ -2,6 +2,7 @@
 
 const db = require("../models");
 const departmentModel = db.departmentModel;
+const employeeModel = db.employeeModel;
 
 module.exports = {
     listDepartments: listDepartments,
@@ -11,7 +12,7 @@ module.exports = {
 
 
 function listDepartments(req, res) {
-    departmentModel.findAll().then(function (data) {
+    departmentModel.findAll({include:{model: employeeModel, required: true, attributes:[['name', 'manager_name']]}}).then(function (data) {
         res.status( 200 ).json( data )
     }).catch(function (err) {
         res.status(500).send(err.stack);
