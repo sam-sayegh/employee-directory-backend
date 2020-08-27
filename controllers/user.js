@@ -6,6 +6,7 @@ const userModel = db.userModel;
 
 module.exports = {
     authenticateUserLogIn: authenticateUserLogIn,
+    authenticateToken: authenticateToken
 };
 
 
@@ -34,6 +35,25 @@ function authenticateUserLogIn(req, res) {
                     'status': 'fail',
                 }
             );
+        }
+    }).catch(function (err) {
+        res.status(500).send(err.stack);
+    });
+}
+
+function authenticateToken(req, res, next) {
+    let authentication_key = req.header('Authorization') || 'None';
+    authentication_key = authentication_key.split("Bearer ");
+    userModel.findOne({
+        where: {
+            authentication_key: authentication_key,
+        }
+    }).then(function (user) {
+        if (!user) {
+            throw res.send(401);
+        }
+        else{
+            next();
         }
     }).catch(function (err) {
         res.status(500).send(err.stack);

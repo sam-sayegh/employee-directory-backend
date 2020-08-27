@@ -38,4 +38,7 @@ db.userModel = require("./user.model.js")(sequelize, Sequelize);
 db.departmentModel = require("./department.model.js")(sequelize, Sequelize);
 db.employeeModel = require("./employee.model.js")(sequelize, Sequelize);
 
+db.departmentModel.belongsTo(db.employeeModel, { foreignKey: 'manager_id' });
+db.employeeModel.belongsTo(db.departmentModel, { foreignKey: 'department_id' });
+
 module.exports = db;

@@ -28,9 +28,5 @@ module.exports = (sequelize, Sequelize) => {
       plural: 'department',
     }
   });
-
-  let employeeModel = require("./employee.model.js")(sequelize, Sequelize);
-  employeeModel.hasOne(department, { foreignKey: 'id' });
-  department.belongsTo(employeeModel, { foreignKey: 'manager_id' });
   return department;
 };

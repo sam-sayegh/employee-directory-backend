@@ -7,6 +7,7 @@ const Sequelize = require('sequelize');
 
 module.exports = {
     listDepartments: listDepartments,
+    listAllDepartments: listAllDepartments,
     getDepartmentData: getDepartmentData,
     updateDepartment: updateDepartment,
     createDepartment: createDepartment,
@@ -32,6 +33,14 @@ function listDepartments(req, res) {
     }).then(function (data) {
         departmentData.items = data;
         res.status(200).json(departmentData);
+    }).catch(function (err) {
+        res.status(500).send(err.stack);
+    });
+}
+
+function listAllDepartments(req, res) {
+    departmentModel.findAll().then(function (data) {
+        res.status(200).json(data);
     }).catch(function (err) {
         res.status(500).send(err.stack);
     });
@@ -72,7 +81,6 @@ function createDepartment(req, res) {
         date_created: Sequelize.fn('NOW'),
         date_updated: Sequelize.fn('NOW')
     }
-    console.log(insertDepartmentValues);
     departmentModel.create(insertDepartmentValues)
         .then((result) => {
             res.status(200).json({ status: 'success' });

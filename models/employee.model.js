@@ -11,6 +11,9 @@ module.exports = (sequelize, Sequelize) => {
     gender: {
       type: Sequelize.STRING
     },
+    job_title: {
+      type: Sequelize.STRING
+    },
     country: {
       type: Sequelize.STRING
     },
@@ -35,7 +38,7 @@ module.exports = (sequelize, Sequelize) => {
     date_updated: {
       type: Sequelize.TIME
     }
-  },{
+  }, {
     tableName: 'employee',
     timestamps: false,
     name: {
@@ -43,6 +46,5 @@ module.exports = (sequelize, Sequelize) => {
       plural: 'employee',
     }
   });
-
   return employee;
 };

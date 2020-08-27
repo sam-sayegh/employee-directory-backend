@@ -9,6 +9,7 @@ module.exports = {
         "`name` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
         "`email` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
         "`gender` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
+        "`job_title` varchar(60) COLLATE utf8_unicode_ci NOT NULL DEFAULT ''," +
         "`country` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
         "`phone` varchar(60) COLLATE utf8_unicode_ci NOT NULL," +
         "`picture` varchar(255) COLLATE utf8_unicode_ci NOT NULL," +
