@@ -24,10 +24,10 @@ module.exports = {
       await queryInterface.sequelize.query(
         "INSERT INTO `employee` (`name`, `email`, `gender`, `job_title`, `country`, `phone`, `picture`, `department_id`, `dob`, `is_manager`, `date_created`, `date_updated`) VALUES " +
         "('Juliane Meurer', 'juliane.meurer@example.com', 'female', 'Office Assistant', 'Germany', '0554-5953158', 'https://randomuser.me/api/portraits/women/84.jpg', 19, '1985-02-25', 1, NOW(), NOW())," +
-        "('Brandon Schmidt', 'brandon.schmidt@example.com', 'male', ' Administrative Assistant', 'Australia', '02-4125-8209', 'https://randomuser.me/api/portraits/men/85.jpg', 14, '1959-11-23', 0, NOW(), NOW())," +
-        "('Eugenia Soler', 'eugenia.soler@example.com', 'female', ' Administrative Assistant', 'Spain', '906-948-936', 'https://randomuser.me/api/portraits/women/80.jpg', 20, '1965-05-10', 1, NOW(), NOW())," +
-        "('Jordan Garcia', 'jordan.garcia@example.com', 'male', ' Administrative Assistant', 'France', '05-81-31-94-59', 'https://randomuser.me/api/portraits/men/68.jpg', 17, '1979-01-15', 0, NOW(), NOW())," +
-        "('Batur Aymen', 'batur.oymen@example.com', 'male', ' Administrative Assistant', 'Turkey', '(405)-816-1769', 'https://randomuser.me/api/portraits/men/50.jpg', 10, '1957-10-28', 0, NOW(), NOW())," +
+        "('Brandon Schmidt', 'brandon.schmidt@example.com', 'male', 'Administrative Assistant', 'Australia', '02-4125-8209', 'https://randomuser.me/api/portraits/men/85.jpg', 14, '1959-11-23', 0, NOW(), NOW())," +
+        "('Eugenia Soler', 'eugenia.soler@example.com', 'female', 'Administrative Assistant', 'Spain', '906-948-936', 'https://randomuser.me/api/portraits/women/80.jpg', 20, '1965-05-10', 1, NOW(), NOW())," +
+        "('Jordan Garcia', 'jordan.garcia@example.com', 'male', 'Administrative Assistant', 'France', '05-81-31-94-59', 'https://randomuser.me/api/portraits/men/68.jpg', 17, '1979-01-15', 0, NOW(), NOW())," +
+        "('Batur Aymen', 'batur.oymen@example.com', 'male', 'Administrative Assistant', 'Turkey', '(405)-816-1769', 'https://randomuser.me/api/portraits/men/50.jpg', 10, '1957-10-28', 0, NOW(), NOW())," +
         "('Siren Klyve', 'siren.klyve@example.com', 'female', 'Software Engineer', 'Norway', '30886040', 'https://randomuser.me/api/portraits/women/77.jpg', 13, '1982-04-28', 0, NOW(), NOW())," +
         "('Emilia Pulkkinen', 'emilia.pulkkinen@example.com', 'female', 'Software Engineer', 'Finland', '05-509-681', 'https://randomuser.me/api/portraits/women/51.jpg', 18, '1972-03-30', 1, NOW(), NOW())," +
         "('Christoffer Olsen', 'christoffer.olsen@example.com', 'male', 'Software Engineer', 'Denmark', '90838502', 'https://randomuser.me/api/portraits/men/52.jpg', 22, '1982-05-09', 0, NOW(), NOW())," +
