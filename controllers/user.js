@@ -29,7 +29,7 @@ function authenticateUserLogIn(req, res) {
                 }
             );
         }
-        else{
+        else {
             res.status(200).json(
                 {
                     'status': 'fail',
@@ -52,7 +52,7 @@ function authenticateToken(req, res, next) {
         if (!user) {
             throw res.send(401);
         }
-        else{
+        else {
             next();
         }
     }).catch(function (err) {
