@@ -10,3 +10,4 @@ employee-directory-backend
 6. run sequelize init
 7. run sequelize db:migrate
 8. run npm start
+9 Username: admin@admin.com -- Password: Test@123
