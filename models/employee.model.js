@@ -1,50 +1,52 @@
+/* eslint-disable strict */
+
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const employee = sequelize.define("employee", {
+  const employee = sequelize.define('employee', {
     name: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     email: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     gender: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     job_title: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     country: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     phone: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     picture: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     department_id: {
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     },
     dob: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
     },
     is_manager: {
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     },
     date_created: {
-      type: Sequelize.TIME
+      type: Sequelize.TIME,
     },
     date_updated: {
-      type: Sequelize.TIME
-    }
+      type: Sequelize.TIME,
+    },
   }, {
     tableName: 'employee',
     timestamps: false,
     name: {
       singular: 'employee',
       plural: 'employee',
-    }
+    },
   });
   return employee;
 };

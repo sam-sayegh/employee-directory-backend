@@ -3,30 +3,30 @@
 module.exports = (sequelize, Sequelize) => {
   const user = sequelize.define("user", {
     name: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     email: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     password: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     authentication_key: {
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
     },
     date_created: {
-      type: Sequelize.TIME
+      type: Sequelize.TIME,
     },
     date_updated: {
-      type: Sequelize.TIME
-    }
+      type: Sequelize.TIME,
+    },
   },{
     tableName: 'user',
     timestamps: false,
     name: {
       singular: 'user',
       plural: 'user',
-    }
+    },
   });
 
   return user;

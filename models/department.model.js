@@ -1,32 +1,34 @@
+/* eslint-disable strict */
+
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const department = sequelize.define("department", {
+  const department = sequelize.define('department', {
     name: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     description: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     office_number: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
     },
     manager_id: {
-      type: Sequelize.INTEGER
+      type: Sequelize.INTEGER,
     },
     date_created: {
-      type: Sequelize.TIME
+      type: Sequelize.TIME,
     },
     date_updated: {
-      type: Sequelize.TIME
-    }
+      type: Sequelize.TIME,
+    },
   }, {
     tableName: 'department',
     timestamps: false,
     name: {
       singular: 'department',
       plural: 'department',
-    }
+    },
   });
   return department;
 };
