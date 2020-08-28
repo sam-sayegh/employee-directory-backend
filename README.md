@@ -17,5 +17,5 @@ employee-directory-backend
 "scripts": {
     "test": "jest"
   },
-2. npm test
+2. run npm test
 
