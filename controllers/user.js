@@ -31,6 +31,7 @@ function authenticateUserLogIn(req, res) {
         {
           status: 'success',
           api_key: authenticationKey,
+          name: user.name,
         },
       );
     } else {
