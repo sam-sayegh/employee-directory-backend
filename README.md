@@ -13,7 +13,7 @@ employee-directory-backend
 9. Username: admin@admin.com -- Password: Test@123
 
 # Unit Testing
-1. Cnfigure an NPM script for running our tests from the command line. Open up package.json and configure a script named test for running Jest:
+1. Configure an NPM script for running our tests from the command line. Open up package.json and configure a script named test for running Jest:
 "scripts": {
     "test": "jest"
   },
