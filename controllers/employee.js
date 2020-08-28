@@ -109,7 +109,8 @@ function createEmployee(req, res) {
   };
   employeeModel.create(insertEmployeeValues)
     .then((result) => {
-      res.status(200).json({ status: 'success' });
+      const newEmployeeId = result.dataValues.id || 0;
+      res.status(200).json({ status: 'success', newEmployeeId: newEmployeeId });
     }).catch((err) => {
       res.status(500).send(err.stack);
     });
@@ -120,7 +121,7 @@ function deleteEmployee(req, res) {
   employeeModel.destroy({
     where: { id: employeeId },
   }).then((data) => {
-    res.status(200).json(data);
+    res.status(200).json({ status: 'success' });
   }).catch((err) => {
     res.status(500).send(err.stack);
   });

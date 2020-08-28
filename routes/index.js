@@ -23,6 +23,8 @@ router.get('/get-employee-data/:id', userController.authenticateToken, employeeC
 router.post('/update-employee', userController.authenticateToken, employeeController.updateEmployee);
 router.post('/update-employee-test', employeeController.updateEmployee);
 router.post('/add-employee', userController.authenticateToken, employeeController.createEmployee);
+router.post('/add-employee-test', employeeController.createEmployee);
 router.get('/delete-employee/:id', userController.authenticateToken, employeeController.deleteEmployee);
+router.get('/delete-employee-test/:id', employeeController.deleteEmployee);
 
 module.exports = router;
