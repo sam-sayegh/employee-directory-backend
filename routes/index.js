@@ -21,6 +21,7 @@ router.get('/list-employees', userController.authenticateToken, employeeControll
 router.get('/load-managers', userController.authenticateToken, employeeController.loadManagers);
 router.get('/get-employee-data/:id', userController.authenticateToken, employeeController.getEmployeeData);
 router.post('/update-employee', userController.authenticateToken, employeeController.updateEmployee);
+router.post('/update-employee-test', employeeController.updateEmployee);
 router.post('/add-employee', userController.authenticateToken, employeeController.createEmployee);
 router.get('/delete-employee/:id', userController.authenticateToken, employeeController.deleteEmployee);
 
