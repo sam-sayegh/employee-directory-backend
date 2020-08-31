@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../app');
 const db = require('../models');
 
-afterAll( async (done) => { await db.sequelize.connectionManager.close(); done(); });
+afterAll(async (done) => { await db.sequelize.connectionManager.close(); done(); });
 
 describe('======= Create Employee ======= ', () => {
   test('It should respond with a status success and a 200 response and newly created employee id.', async () => {
